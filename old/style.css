@@ -1,0 +1,65 @@
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+h4 {
+  text-align: center;
+}
+p {
+  color: red;
+} 
+
+/* thumbnails for gallery */
+.thumbnail-grid {
+  /* Override some default browser styles */
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+  /* The key: make the whole thing a CSS grid */
+  display: grid;
+  grid: auto-flow / repeat(auto-fit, minmax(200px, 1fr));
+  align-items: baseline;
+  /* Spacing */
+  grid-gap: 10px;  /* old version of the property name */
+  gap: 10px;
+}
+.thumbnail-grid li {
+  /* Some general stylistic stuff */
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  background: #f4f4f4;
+}
+.thumbnail-grid img {
+  /* Prevent a big thumbnail from spilling out */
+  max-width: 100%;
+}
+/* end of thumbnails for gallery */
+
+
+.left {
+    background-color: #2196F3;
+    padding: 20px;
+    float: left;
+    width: 20%; /* The width is 20%, by default */
+}
+.main {
+    background-color: #f1f1f1;
+    padding: 20px;
+    float: left;
+    width: 60%; /* The width is 60%, by default */
+}
+.right {
+    background-color: #4CAF50;
+    padding: 20px;
+    float: left;
+    width: 20%; /* The width is 20%, by default */
+}
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
